@@ -1,6 +1,15 @@
 {
+  "references": [
+    { "path": "./packages/components-react-native" },
+    { "path": "./packages/icons-react-native" },
+    { "path": "./packages/demo" }
+  ],
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@vpicone/*": ["./packages/*/src"]
+    },
+    "composite": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,

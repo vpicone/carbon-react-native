@@ -1,14 +1,16 @@
 {
-  "name": "@vpicone/components-react-native",
+  "name": "@vpicone/icons-react-native",
   "version": "0.0.0",
   "license": "Apache-2.0",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
   "types": "lib/typescript/src/index.d.ts",
   "files": [
+    "src/",
     "lib/",
-    "src/"
+    "!**/__tests__"
   ],
   "scripts": {
     "prepare": "bob build",
@@ -27,7 +29,12 @@
     "targets": [
       "commonjs",
       "module",
-      "typescript"
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
     ]
   }
 }

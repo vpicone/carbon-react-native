@@ -1,8 +1,8 @@
 // https://engineering.brigad.co/react-native-monorepos-code-sharing-f6c08172b417
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  watchFolders: [path.resolve(__dirname, '../../')],
+  watchFolders: [path.resolve(__dirname, "../../")],
   transformer: {
     getTransformOptions: async () => ({
       transform: {
