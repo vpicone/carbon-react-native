@@ -1,10 +1,14 @@
 {
-  "name": "rn-monorepo",
+  "name": "carbon-react-native",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "prepare": "lerna run prepare",
+    "clean": "lerna run clean"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/runtime": "^7.8.4",
@@ -17,6 +21,7 @@
     "del-cli": "^3.0.1",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
+    "lerna": "^3.22.1",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
