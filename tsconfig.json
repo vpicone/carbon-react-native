@@ -1,8 +1,7 @@
 {
   "references": [
     { "path": "./packages/components-react-native" },
-    { "path": "./packages/icons-react-native" },
-    { "path": "./packages/demo" }
+    { "path": "./packages/icons-react-native" }
   ],
   "compilerOptions": {
     "baseUrl": ".",
