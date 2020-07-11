@@ -16,7 +16,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
+      "pre-commit": "lint-staged && yarn typescript"
     }
   },
   "commitlint": {
@@ -40,11 +40,16 @@
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
     "lerna": "^3.22.1",
+    "lint-staged": "^10.2.11",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.0.5",
     "prettier-config-carbon": "^0.2.0",
     "react": "^16.13.1",
     "react-native": "^0.63.0",
     "typescript": "^3.9.6"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --cache --fix",
+    "*.{css,scss,json,html,yaml}": "prettier --write"
   }
 }
