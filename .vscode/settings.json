@@ -1,8 +1,16 @@
 {
-  "prettier.disableLanguages": [
-    "typescript",
-    "typescriptreact",
-    "javascript",
-    "javascriptreact"
-  ]
+  "prettier.disableLanguages": ["typescript", "typescriptreact", "javascript"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  }
 }

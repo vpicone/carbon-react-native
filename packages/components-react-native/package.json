@@ -8,6 +8,8 @@
   "source": "src/index.tsx",
   "types": "lib/typescript/src/index.d.ts",
   "files": [
+    "react-native.config.json",
+    "assets",
     "src/",
     "lib/",
     "!**/__tests__"
@@ -36,5 +38,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
   }
 }
