@@ -1,54 +1,68 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { white as theme } from '@carbon/themes';
 import {
-  TouchableOpacity,
-  TouchableNativeFeedback,
+  Pressable,
+  PressableProps,
+  PressableStateCallbackType,
   View,
   Text,
   StyleSheet,
-  TouchableOpacityProps,
-  TouchableNativeFeedbackProps,
   StyleProp,
   ViewStyle,
   TextStyle,
   TextProps,
   Platform,
+  ViewProps,
 } from 'react-native';
 
-export interface ButtonProps
-  extends TouchableNativeFeedbackProps,
-    TouchableOpacityProps {
-  buttonStyle?: StyleProp<ViewStyle>;
+export interface ButtonProps {
   title?: string;
   titleProps?: TextProps;
   titleStyle?: StyleProp<TextStyle>;
+  pressableProps?: PressableProps;
+  pressableStyle?: StyleProp<ViewStyle>;
+  pressedStyle?: StyleProp<ViewStyle>;
+  containerProps?: ViewProps;
   containerStyle?: StyleProp<ViewStyle>;
-  type?: 'primary' | 'secondary' | 'tertiary';
   disabled?: boolean;
   disabledTitleStyle?: StyleProp<TextStyle>;
-  disabledButtonStyle?: StyleProp<ViewStyle>;
+  disabledPressableStyle?: StyleProp<ViewStyle>;
+  type?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const theme = {
-  colors: {
-    interactive01: '#0f62fe',
-    danger: '#da1e28',
-  },
-};
+// TODO: flatten necessary?
 
-const Button: React.FC<ButtonProps> = ({ title }) => {
-  const TouchableComponent = Platform.select<React.ComponentClass>({
-    android: TouchableNativeFeedback,
-    default: TouchableOpacity,
-  });
-
+const Button: React.FC<ButtonProps> = ({
+  title,
+  titleProps,
+  titleStyle,
+  pressableProps,
+  pressableStyle,
+  pressedStyle,
+  containerProps,
+  containerStyle,
+}) => {
   return (
-    <View style={styles.container}>
-      <TouchableComponent>
-        <View style={styles.button}>
-          {title && <Text style={styles.title}>{title}</Text>}
-        </View>
-      </TouchableComponent>
+    <View style={[styles.container, containerStyle]} {...containerProps}>
+      <Pressable
+        style={({
+          pressed,
+        }: PressableStateCallbackType): StyleProp<ViewStyle> => [
+          styles.pressable,
+          pressableStyle,
+          {
+            backgroundColor: pressed ? theme.activeDanger : theme.danger,
+          },
+          pressed && pressedStyle,
+        ]}
+        {...pressableProps}>
+        {title && (
+          <Text style={[styles.title, titleStyle]} {...titleProps}>
+            {title}
+          </Text>
+        )}
+      </Pressable>
     </View>
   );
 };
@@ -58,10 +72,9 @@ const styles = StyleSheet.create({
   container: {
     overflow: 'hidden',
   },
-  button: {
+  pressable: {
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: theme.colors.danger,
     padding: 16,
     paddingRight: 64,
   },

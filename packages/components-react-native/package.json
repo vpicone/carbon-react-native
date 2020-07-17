@@ -40,6 +40,7 @@
     ]
   },
   "dependencies": {
+    "@carbon/themes": "^10.14.0",
     "prop-types": "^15.7.2"
   }
 }

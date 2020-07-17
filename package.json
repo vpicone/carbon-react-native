@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "prepare": "lerna run prepare",
-    "start": "yarn workspace demo storybook",
+    "dev": "yarn workspace demo storybook",
     "ios": "yarn workspace demo ios",
     "test": "jest",
     "clean": "lerna run clean",
@@ -34,7 +34,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.4",
     "@types/react": "^16.9.42",
-    "@types/react-native": "^0.62.18",
+    "@types/react-native": "^0.63.1",
     "commitlint": "^9.0.1",
     "del-cli": "^3.0.1",
     "eslint": "^7.4.0",
