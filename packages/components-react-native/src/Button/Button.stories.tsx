@@ -10,4 +10,6 @@ import Button from './Button';
 
 storiesOf('Button', module)
   // .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add('with text', () => <Button title="Test" />);
+  .add('Primary', () => <Button title="Primary button" />)
+  .add('Secondary', () => <Button kind="secondary" title="Secondary button" />)
+  .add('Danger', () => <Button kind="danger" title="Danger button" />);
