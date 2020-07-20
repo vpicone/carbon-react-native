@@ -15,7 +15,7 @@ import {
   ViewProps,
 } from 'react-native';
 
-export interface ButtonProps extends Omit<PressableProps, 'children'> {
+export interface ButtonProps {
   title?: string;
   titleProps?: TextProps;
   titleStyle?: StyleProp<TextStyle>;
