@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "prepare": "lerna run prepare",
-    "dev": "yarn workspace demo storybook",
+    "dev": "yarn workspace demo start",
     "ios": "yarn workspace demo ios",
     "test": "jest",
     "clean": "lerna run clean",

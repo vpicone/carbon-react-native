@@ -34,6 +34,22 @@
 		D132FA42B62C4C89A04FF468 /* IBMPlexSans-TextItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2092BF3EF89439693091B9F /* IBMPlexSans-TextItalic.ttf */; };
 		1711BE78ECF04F61A4B22770 /* IBMPlexSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F364666DA6CF495985367373 /* IBMPlexSans-Thin.ttf */; };
 		AAF8166E194F442C9D77D8F3 /* IBMPlexSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7218FBAB8C464C728F421A49 /* IBMPlexSans-ThinItalic.ttf */; };
+		77C39FD9C5374A9CA90A03CA /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF017EDD46F4FC6B275FCC5 /* IBMPlexMono-Bold.ttf */; };
+		C88FFAAE4EC3489F9459D1B4 /* IBMPlexMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23768E7A736646AE95C8F23E /* IBMPlexMono-BoldItalic.ttf */; };
+		301FB983C7594DE3A62791F3 /* IBMPlexMono-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFFDD112103C4CBD8FDDBFCD /* IBMPlexMono-ExtraLight.ttf */; };
+		4F9469454FFD4AED8751D397 /* IBMPlexMono-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0677A0CB41664DF3848F09A5 /* IBMPlexMono-ExtraLightItalic.ttf */; };
+		EFF716EC62574284B0ACF02A /* IBMPlexMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7434E5777E774FEB8894C2E6 /* IBMPlexMono-Italic.ttf */; };
+		8F4DB0282BB14BD985373292 /* IBMPlexMono-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05C497BC3B61416486FD01EB /* IBMPlexMono-Light.ttf */; };
+		73AD972B51DC4729AF42953B /* IBMPlexMono-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F4857108B2D4B99BD2A371E /* IBMPlexMono-LightItalic.ttf */; };
+		854DDA121007442DA3F97204 /* IBMPlexMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66A47A6147164C7B8314C63B /* IBMPlexMono-Medium.ttf */; };
+		A9461B2E09794199AE76DAAD /* IBMPlexMono-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7978E3F3371C4D90A951DD14 /* IBMPlexMono-MediumItalic.ttf */; };
+		CDF28642A237479EA984595F /* IBMPlexMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0BD239B8E747EB81476DEE /* IBMPlexMono-Regular.ttf */; };
+		AEE6188EDDA84BCAA6AA05E9 /* IBMPlexMono-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D1C486461A746F5AEE0B7A2 /* IBMPlexMono-SemiBold.ttf */; };
+		327BF32DB8CB46B98D8CB2A2 /* IBMPlexMono-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558906D9DBB64E62921FB189 /* IBMPlexMono-SemiBoldItalic.ttf */; };
+		120D34E081D14B239DE07E23 /* IBMPlexMono-Text.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80A53C27C2154A3F87C60AD5 /* IBMPlexMono-Text.ttf */; };
+		B8DF2BD1AF21491690B5A9E9 /* IBMPlexMono-TextItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A18EB97E5E314B1FBD9F3771 /* IBMPlexMono-TextItalic.ttf */; };
+		99E33F5562E4407B87743599 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF4AACD3F2EA43819059167B /* IBMPlexMono-Thin.ttf */; };
+		72B45650D3E4496A9EE74B5E /* IBMPlexMono-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C230D0C05C24886B9D4916B /* IBMPlexMono-ThinItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +107,22 @@
 		A2092BF3EF89439693091B9F /* IBMPlexSans-TextItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexSans-TextItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexSans-TextItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F364666DA6CF495985367373 /* IBMPlexSans-Thin.ttf */ = {isa = PBXFileReference; name = "IBMPlexSans-Thin.ttf"; path = "../../components-react-native/assets/plex/IBMPlexSans-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7218FBAB8C464C728F421A49 /* IBMPlexSans-ThinItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexSans-ThinItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexSans-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5FF017EDD46F4FC6B275FCC5 /* IBMPlexMono-Bold.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Bold.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23768E7A736646AE95C8F23E /* IBMPlexMono-BoldItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-BoldItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AFFDD112103C4CBD8FDDBFCD /* IBMPlexMono-ExtraLight.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-ExtraLight.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0677A0CB41664DF3848F09A5 /* IBMPlexMono-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-ExtraLightItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7434E5777E774FEB8894C2E6 /* IBMPlexMono-Italic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Italic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		05C497BC3B61416486FD01EB /* IBMPlexMono-Light.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Light.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F4857108B2D4B99BD2A371E /* IBMPlexMono-LightItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-LightItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		66A47A6147164C7B8314C63B /* IBMPlexMono-Medium.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Medium.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7978E3F3371C4D90A951DD14 /* IBMPlexMono-MediumItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-MediumItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE0BD239B8E747EB81476DEE /* IBMPlexMono-Regular.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Regular.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8D1C486461A746F5AEE0B7A2 /* IBMPlexMono-SemiBold.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-SemiBold.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		558906D9DBB64E62921FB189 /* IBMPlexMono-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-SemiBoldItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		80A53C27C2154A3F87C60AD5 /* IBMPlexMono-Text.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Text.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Text.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A18EB97E5E314B1FBD9F3771 /* IBMPlexMono-TextItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-TextItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-TextItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DF4AACD3F2EA43819059167B /* IBMPlexMono-Thin.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Thin.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C230D0C05C24886B9D4916B /* IBMPlexMono-ThinItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-ThinItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +266,22 @@
 				A2092BF3EF89439693091B9F /* IBMPlexSans-TextItalic.ttf */,
 				F364666DA6CF495985367373 /* IBMPlexSans-Thin.ttf */,
 				7218FBAB8C464C728F421A49 /* IBMPlexSans-ThinItalic.ttf */,
+				5FF017EDD46F4FC6B275FCC5 /* IBMPlexMono-Bold.ttf */,
+				23768E7A736646AE95C8F23E /* IBMPlexMono-BoldItalic.ttf */,
+				AFFDD112103C4CBD8FDDBFCD /* IBMPlexMono-ExtraLight.ttf */,
+				0677A0CB41664DF3848F09A5 /* IBMPlexMono-ExtraLightItalic.ttf */,
+				7434E5777E774FEB8894C2E6 /* IBMPlexMono-Italic.ttf */,
+				05C497BC3B61416486FD01EB /* IBMPlexMono-Light.ttf */,
+				0F4857108B2D4B99BD2A371E /* IBMPlexMono-LightItalic.ttf */,
+				66A47A6147164C7B8314C63B /* IBMPlexMono-Medium.ttf */,
+				7978E3F3371C4D90A951DD14 /* IBMPlexMono-MediumItalic.ttf */,
+				DE0BD239B8E747EB81476DEE /* IBMPlexMono-Regular.ttf */,
+				8D1C486461A746F5AEE0B7A2 /* IBMPlexMono-SemiBold.ttf */,
+				558906D9DBB64E62921FB189 /* IBMPlexMono-SemiBoldItalic.ttf */,
+				80A53C27C2154A3F87C60AD5 /* IBMPlexMono-Text.ttf */,
+				A18EB97E5E314B1FBD9F3771 /* IBMPlexMono-TextItalic.ttf */,
+				DF4AACD3F2EA43819059167B /* IBMPlexMono-Thin.ttf */,
+				3C230D0C05C24886B9D4916B /* IBMPlexMono-ThinItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -397,6 +445,22 @@
 				D132FA42B62C4C89A04FF468 /* IBMPlexSans-TextItalic.ttf in Resources */,
 				1711BE78ECF04F61A4B22770 /* IBMPlexSans-Thin.ttf in Resources */,
 				AAF8166E194F442C9D77D8F3 /* IBMPlexSans-ThinItalic.ttf in Resources */,
+				77C39FD9C5374A9CA90A03CA /* IBMPlexMono-Bold.ttf in Resources */,
+				C88FFAAE4EC3489F9459D1B4 /* IBMPlexMono-BoldItalic.ttf in Resources */,
+				301FB983C7594DE3A62791F3 /* IBMPlexMono-ExtraLight.ttf in Resources */,
+				4F9469454FFD4AED8751D397 /* IBMPlexMono-ExtraLightItalic.ttf in Resources */,
+				EFF716EC62574284B0ACF02A /* IBMPlexMono-Italic.ttf in Resources */,
+				8F4DB0282BB14BD985373292 /* IBMPlexMono-Light.ttf in Resources */,
+				73AD972B51DC4729AF42953B /* IBMPlexMono-LightItalic.ttf in Resources */,
+				854DDA121007442DA3F97204 /* IBMPlexMono-Medium.ttf in Resources */,
+				A9461B2E09794199AE76DAAD /* IBMPlexMono-MediumItalic.ttf in Resources */,
+				CDF28642A237479EA984595F /* IBMPlexMono-Regular.ttf in Resources */,
+				AEE6188EDDA84BCAA6AA05E9 /* IBMPlexMono-SemiBold.ttf in Resources */,
+				327BF32DB8CB46B98D8CB2A2 /* IBMPlexMono-SemiBoldItalic.ttf in Resources */,
+				120D34E081D14B239DE07E23 /* IBMPlexMono-Text.ttf in Resources */,
+				B8DF2BD1AF21491690B5A9E9 /* IBMPlexMono-TextItalic.ttf in Resources */,
+				99E33F5562E4407B87743599 /* IBMPlexMono-Thin.ttf in Resources */,
+				72B45650D3E4496A9EE74B5E /* IBMPlexMono-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

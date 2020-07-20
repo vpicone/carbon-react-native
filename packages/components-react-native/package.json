@@ -42,8 +42,6 @@
   "dependencies": {
     "@carbon/colors": "^10.11.0",
     "@carbon/themes": "^10.14.0",
-    "@storybook/addon-knobs": "^5.3.19",
-    "@storybook/addon-ondevice-knobs": "^5.3.19",
     "prop-types": "^15.7.2"
   }
 }

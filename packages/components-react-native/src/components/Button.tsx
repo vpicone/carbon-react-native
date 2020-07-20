@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 
 export interface ButtonProps {
-  title?: string;
+  title: string;
   titleProps?: TextProps;
   titleStyle?: StyleProp<TextStyle>;
   pressableProps?: PressableProps;
@@ -163,12 +163,8 @@ const pressedStyles = StyleSheet.create({
   },
 });
 
-Button.defaultProps = {
-  title: '',
-};
-
 Button.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 export default Button;
