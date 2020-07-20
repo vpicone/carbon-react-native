@@ -11,15 +11,17 @@
     "prestorybook": "rnstl --silent"
   },
   "dependencies": {
+    "@storybook/addon-ondevice-knobs": "^5.3.19",
     "@storybook/react-native": "^5.3.19",
     "@vpicone/components-react-native": "^0.0.0",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
-    "react-native": "^0.63.0"
+    "react-native": "^0.63.1"
   },
   "devDependencies": {
     "@react-native-community/async-storage": "^1.11.0",
-    "react-native-storybook-loader": "^1.8.1"
+    "@storybook/addon-knobs": "^5.3.19",
+    "react-native-storybook-loader": "^1"
   },
   "config": {
     "react-native-storybook-loader": {

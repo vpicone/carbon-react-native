@@ -2,14 +2,17 @@
 import {
   configure,
   getStorybookUI,
-  // addDecorator,
+  addDecorator,
 } from '@storybook/react-native';
 import { AppRegistry } from 'react-native';
 import { default as asyncStorage } from '@react-native-community/async-storage';
+import { withKnobs } from '@storybook/addon-knobs';
+import './rn-addons';
+
 import { loadStories } from './story-loader.js';
 // import Wrapper from './Wrapper';
 
-// addDecorator((storyFn) => <Wrapper>{storyFn()}</Wrapper>);
+addDecorator(withKnobs);
 
 // import stories
 configure(() => {

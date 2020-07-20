@@ -1,12 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { white as theme } from '@carbon/themes';
-import { rgba } from '@carbon/colors';
 import {
   Pressable,
   PressableProps,
-  GestureResponderEvent,
-  Animated,
+  View,
   Text,
   StyleSheet,
   StyleProp,
@@ -25,11 +23,11 @@ export interface ButtonProps extends Omit<PressableProps, 'children'> {
   pressableStyle?: StyleProp<ViewStyle>;
   pressedStyle?: StyleProp<ViewStyle>;
   containerProps?: ViewProps;
-  containerStyle?: Animated.WithAnimatedValue<StyleProp<ViewStyle>>;
+  containerStyle?: StyleProp<ViewStyle>;
   disabled?: boolean;
   disabledTitleStyle?: StyleProp<TextStyle>;
   disabledPressableStyle?: StyleProp<ViewStyle>;
-  kind?: 'primary' | 'secondary' | 'danger';
+  kind?: 'primary' | 'secondary' | 'tertiary' | 'danger';
 }
 
 // TODO: flatten necessary?
@@ -38,86 +36,67 @@ export interface ButtonProps extends Omit<PressableProps, 'children'> {
 // - rename native events when destructuring: onEvent => onEventProp
 // - call event handlers as soon as possible
 // - event handlers called handleX locally
+// - Explicit prop pass through for each component (no {...rest}) it's to difficult for devs to know where it ends up in compound components
+// - user styles go last so they can override ours
+// - user props go last so they have ultimate control
+
+/* Style order
+  1. our styles
+  2. their styles
+  3. Our variant style
+  4. their variant style
+*/
 
 const Button: React.FC<ButtonProps> = ({
   title,
   titleProps,
-  titleStyle,
+  titleStyle: titleStyleProp,
   pressableProps,
-  pressableStyle,
+  pressableStyle: pressableStyleProp,
   containerProps,
-  containerStyle,
-  onPressIn: onPressInProp,
-  onPressOut: onPressOutProp,
+  containerStyle: containerStyleProp,
   kind = 'primary',
+  disabled = false,
+  disabledPressableStyle: disabledPressableStyleProp,
+  disabledTitleStyle: disabledTitleStyleProp,
 }) => {
-  const { current: backgroundAnimation } = useRef(new Animated.Value(0));
+  const viewStyle = [styles.container, containerStyleProp];
 
-  const handleOnPressIn = (e: GestureResponderEvent) => {
-    onPressInProp && onPressInProp(e);
-    Animated.timing(backgroundAnimation, {
-      toValue: 1,
-      duration: 70,
-      useNativeDriver: false,
-    }).start();
-  };
+  const disabledPressableStyle = [
+    styles.disabledPressable,
+    disabledPressableStyleProp,
+  ];
 
-  const handleOnPressOut = (e: GestureResponderEvent) => {
-    onPressOutProp && onPressOutProp(e);
-    Animated.timing(backgroundAnimation, {
-      toValue: 0,
-      duration: 70,
-      useNativeDriver: false,
-    }).start();
-  };
-
-  const getBackgroundColors = () => {
-    switch (kind) {
-      case 'primary':
-        return {
-          base: rgba(theme.interactive01, 1),
-          active: rgba(theme.activePrimary, 1),
-        };
-      case 'secondary':
-        return {
-          base: rgba(theme.interactive02, 1),
-          active: rgba(theme.activeSecondary, 1),
-        };
-      case 'danger':
-        return {
-          base: rgba(theme.danger, 1),
-          active: rgba(theme.activeDanger, 1),
-        };
-    }
-  };
-
-  const { base, active } = getBackgroundColors();
-
-  const backgroundColorInterpolation = backgroundAnimation.interpolate({
-    inputRange: [0, 1],
-    outputRange: [base, active],
-  });
+  const disabledTitleStyle = [styles.disabledTitle, disabledTitleStyleProp];
 
   return (
-    <Animated.View
-      {...containerProps}
-      style={[
-        styles.container,
-        containerStyle,
-        { backgroundColor: backgroundColorInterpolation },
-      ]}>
+    <View style={viewStyle} {...containerProps}>
       <Pressable
-        {...pressableProps}
-        onPressIn={handleOnPressIn}
-        onPressOut={handleOnPressOut}
-        style={[styles.pressable, pressableStyle]}>
-        {title && (
-          <Text {...titleProps} style={[styles.title, titleStyle]}>
-            {title}
-          </Text>
-        )}
+        style={({ pressed }) => [
+          styles.pressable,
+          styles[kind],
+          pressed && pressedStyles[kind],
+          disabled && disabledPressableStyle,
+          pressableStyleProp,
+        ]}
+        {...pressableProps}>
+        {({ pressed }) =>
+          title && (
+            <Text
+              style={[
+                styles.title,
+                kind === 'tertiary' && styles.tertiaryTitle,
+                kind === 'tertiary' && pressed && styles.activeTertiaryTitle,
+                titleStyleProp,
+                disabled && disabledTitleStyle,
+              ]}
+              {...titleProps}>
+              {title}
+            </Text>
+          )
+        }
       </Pressable>
-    </Animated.View>
+    </View>
   );
 };
 
@@ -138,6 +117,49 @@ const styles = StyleSheet.create({
       android: 16,
       default: 18,
     }),
+  },
+  primary: {
+    backgroundColor: theme.interactive01,
+  },
+  secondary: {
+    backgroundColor: theme.interactive02,
+  },
+  tertiary: {
+    borderWidth: 1,
+    borderColor: theme.interactive03,
+    backgroundColor: 'transparent',
+  },
+  tertiaryTitle: {
+    color: theme.interactive03,
+  },
+  activeTertiaryTitle: {
+    color: theme.text04,
+  },
+  danger: {
+    backgroundColor: theme.danger,
+  },
+  disabledPressable: {
+    backgroundColor: theme.disabled02,
+  },
+  disabledTitle: {
+    color: theme.disabled03,
+  },
+});
+
+const pressedStyles = StyleSheet.create({
+  primary: {
+    backgroundColor: theme.activePrimary,
+  },
+  secondary: {
+    backgroundColor: theme.activeSecondary,
+  },
+  tertiary: {
+    borderColor: theme.activeTertiary,
+    backgroundColor: theme.activeTertiary,
+    color: theme.text01,
+  },
+  danger: {
+    backgroundColor: theme.activeDanger,
   },
 });
 
