@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, StatusBar, View } from 'react-native';
+import { SafeAreaView, StyleSheet, StatusBar, ScrollView } from 'react-native';
 
 import { Text } from '@vpicone/components-react-native';
 
@@ -11,12 +11,12 @@ const App: React.FC = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.safeArea}>
-        <View>
+        <ScrollView>
           <Text kind="h6">Button</Text>
           <ButtonDemo />
           <Text kind="h6">Typography</Text>
           <TextDemo />
-        </View>
+        </ScrollView>
       </SafeAreaView>
     </>
   );
@@ -31,10 +31,6 @@ const styles = StyleSheet.create({
   },
   list: {
     // backgroundColor: '#e0e0e0',
-  },
-  button: {
-    marginBottom: 4,
-    marginTop: 0,
   },
 });
 
