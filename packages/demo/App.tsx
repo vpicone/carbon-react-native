@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <ScrollView>
           <Text kind="h6">
             Button
-            <Icon size={32} name="4K--filled" />
+            <Icon size={32} name="network--4" />
           </Text>
           <ButtonDemo />
           <Text kind="h6">Typography</Text>
