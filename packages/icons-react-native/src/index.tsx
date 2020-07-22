@@ -10,13 +10,15 @@ interface CarbonIconProps extends IconProps {
   name: CarbonIconName;
 }
 
-const CarbonIcon: React.FC<CarbonIconProps> = (props) => <Icon {...props} />;
-
 // TODO add proper types so we folks can use the other Icon features
 const Icon = createIconSetFromIcoMoon(
   iconMoonData,
   'CarbonIcons-Core',
   'CarbonIcons-Core.ttf'
+);
+
+const CarbonIcon: React.FC<CarbonIconProps> = ({ size = 24, ...rest }) => (
+  <Icon size={size} {...rest} />
 );
 
 export default CarbonIcon;

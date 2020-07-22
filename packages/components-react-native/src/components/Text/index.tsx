@@ -25,8 +25,12 @@ export interface TextProps extends RNTextProps {
   children?: ChildElement | ChildElement[];
 }
 
-const Text: React.FC<TextProps> = ({ children, kind = 'p1' }) => {
-  return <RNText style={[styles.text, styles[kind]]}>{children}</RNText>;
+const Text: React.FC<TextProps> = ({ children, kind = 'p1', ...rest }) => {
+  return (
+    <RNText style={[styles.text, styles[kind]]} {...rest}>
+      {children}
+    </RNText>
+  );
 };
 
 const styles = StyleSheet.create({
