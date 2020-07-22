@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": [],
+      "label": "npm: dev",
+      "detail": "yarn workspace demo start"
+    },
+    {
+      "type": "npm",
+      "script": "ios",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": [],
+      "label": "npm: ios",
+      "detail": "yarn workspace demo start"
+    }
+  ]
+}
