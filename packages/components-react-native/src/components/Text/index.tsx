@@ -26,7 +26,6 @@ export interface TextProps extends RNTextProps {
 }
 
 const Text: React.FC<TextProps> = ({ children, kind = 'p1' }) => {
-  console.log(kind);
   return <RNText style={[styles.text, styles[kind]]}>{children}</RNText>;
 };
 

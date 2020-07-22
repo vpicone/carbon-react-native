@@ -8,7 +8,7 @@
   "source": "src/index.tsx",
   "types": "lib/typescript/src/index.d.ts",
   "files": [
-    "react-native.config.json",
+    "react-native.config.js",
     "assets",
     "src/",
     "lib/",

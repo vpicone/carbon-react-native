@@ -50,6 +50,7 @@
 		B8DF2BD1AF21491690B5A9E9 /* IBMPlexMono-TextItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A18EB97E5E314B1FBD9F3771 /* IBMPlexMono-TextItalic.ttf */; };
 		99E33F5562E4407B87743599 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF4AACD3F2EA43819059167B /* IBMPlexMono-Thin.ttf */; };
 		72B45650D3E4496A9EE74B5E /* IBMPlexMono-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C230D0C05C24886B9D4916B /* IBMPlexMono-ThinItalic.ttf */; };
+		DC75366966594218826E4856 /* CarbonIcons-Core.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B29E6C3768456CB1220380 /* CarbonIcons-Core.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		A18EB97E5E314B1FBD9F3771 /* IBMPlexMono-TextItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-TextItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-TextItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DF4AACD3F2EA43819059167B /* IBMPlexMono-Thin.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-Thin.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3C230D0C05C24886B9D4916B /* IBMPlexMono-ThinItalic.ttf */ = {isa = PBXFileReference; name = "IBMPlexMono-ThinItalic.ttf"; path = "../../components-react-native/assets/plex/IBMPlexMono-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		32B29E6C3768456CB1220380 /* CarbonIcons-Core.ttf */ = {isa = PBXFileReference; name = "CarbonIcons-Core.ttf"; path = "../../icons-react-native/assets/icons/CarbonIcons-Core.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 				A18EB97E5E314B1FBD9F3771 /* IBMPlexMono-TextItalic.ttf */,
 				DF4AACD3F2EA43819059167B /* IBMPlexMono-Thin.ttf */,
 				3C230D0C05C24886B9D4916B /* IBMPlexMono-ThinItalic.ttf */,
+				32B29E6C3768456CB1220380 /* CarbonIcons-Core.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				B8DF2BD1AF21491690B5A9E9 /* IBMPlexMono-TextItalic.ttf in Resources */,
 				99E33F5562E4407B87743599 /* IBMPlexMono-Thin.ttf in Resources */,
 				72B45650D3E4496A9EE74B5E /* IBMPlexMono-ThinItalic.ttf in Resources */,
+				DC75366966594218826E4856 /* CarbonIcons-Core.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

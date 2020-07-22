@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@vpicone/components-react-native": "^0.0.0",
+    "@vpicone/icons-react-native": "^0.0.0",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "^0.63.1"

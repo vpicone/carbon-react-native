@@ -1,10 +1,12 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
 
-const Icon: React.FC = () => <View style={styles.icon} />;
+// generated from https://icomoon.io/app
+import iconMoonData from './carbon-icomoon-data.json';
 
-const styles = StyleSheet.create({
-  icon: { height: 24, width: 24, backgroundColor: '#0f62fe' },
-});
+const Icon = createIconSetFromIcoMoon(
+  iconMoonData,
+  'CarbonIcons-Core',
+  'CarbonIcons-Core.ttf'
+);
 
 export default Icon;
