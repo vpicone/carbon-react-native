@@ -10,16 +10,6 @@
       "problemMatcher": [],
       "label": "npm: dev",
       "detail": "yarn workspace demo start"
-    },
-    {
-      "type": "npm",
-      "script": "ios",
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-      "problemMatcher": [],
-      "label": "npm: ios",
-      "detail": "yarn workspace demo start"
     }
   ]
 }
