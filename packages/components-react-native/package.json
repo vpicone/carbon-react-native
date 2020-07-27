@@ -26,7 +26,8 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "@react-native-community/bob": "^0.16.2"
   },
   "@react-native-community/bob": {
     "source": "src",
@@ -47,5 +48,6 @@
     "@carbon/themes": "^10.14.0",
     "@vpicone/icons-react-native": "^0.1.2",
     "prop-types": "^15.7.2"
-  }
+  },
+  "gitHead": "ac36c8b03ec0f872899383014f358af4b4bc9194"
 }
