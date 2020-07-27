@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig",
-  "include": ["src/**/*", "src/**/*.json"],
+  "include": ["src/**/*.tsx", "src/**/*.json"],
   "compilerOptions": {
     "outDir": "./lib/typescript"
   }

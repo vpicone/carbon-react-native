@@ -21,4 +21,6 @@ const CarbonIcon: React.FC<CarbonIconProps> = ({ size = 24, ...rest }) => (
   <Icon size={size} {...rest} />
 );
 
+export { default as useFonts } from './useFonts';
+
 export default CarbonIcon;

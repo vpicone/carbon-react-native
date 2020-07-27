@@ -10,8 +10,8 @@
   "files": [
     "react-native.config.js",
     "assets",
-    "src/",
-    "lib/",
+    "src",
+    "lib",
     "!**/__tests__"
   ],
   "scripts": {
@@ -19,8 +19,8 @@
     "clean": "del lib"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-native": "^0.63.0"
+    "react": "*",
+    "react-native": "*"
   },
   "devDependencies": {
     "typescript": "^3.9.7"
@@ -34,7 +34,7 @@
       [
         "typescript",
         {
-          "project": "tsconfig.json"
+          "project": "tsconfig.build.json"
         }
       ]
     ]
@@ -42,6 +42,7 @@
   "dependencies": {
     "@carbon/colors": "^10.11.0",
     "@carbon/themes": "^10.14.0",
+    "@vpicone/icons-react-native": "^0.0.0",
     "prop-types": "^15.7.2"
   }
 }

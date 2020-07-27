@@ -19,8 +19,8 @@
     "clean": "del lib"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-native": "^0.63.0"
+    "react": "*",
+    "react-native": "*"
   },
   "devDependencies": {
     "@types/react-native-vector-icons": "^6.4.5",
@@ -35,12 +35,13 @@
       [
         "typescript",
         {
-          "project": "tsconfig.json"
+          "project": "tsconfig.build.json"
         }
       ]
     ]
   },
   "dependencies": {
+    "@expo/vector-icons": "*",
     "prop-types": "^15.7.2",
     "react-native-vector-icons": "^7.0.0"
   }
