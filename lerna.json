@@ -9,7 +9,6 @@
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "chore: publish",
-      "yes": "true",
       "ignoreChanges": ["**/__tests__/**", "**/*.md", "**/example/**"]
     }
   }
