@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig",
+  "include": ["**/*.tsx"],
+  "references": [{ "path": "../components-react-native" }]
+}
