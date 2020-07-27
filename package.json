@@ -15,6 +15,10 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "typescript": "tsc --noEmit --composite false"
   },
+  "resolutions": {
+    "react": "^16.13.1",
+    "react-native": "^0.62.2"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
