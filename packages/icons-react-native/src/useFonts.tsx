@@ -1,6 +1,7 @@
 import { useFonts } from 'expo-font';
 
-const useCarbonFonts = (): [boolean, Error | null] => {
+// This is automatically included in the carbon components `useFonts
+const useCarbonIcons = (): [boolean, Error | null] => {
   const [loaded, error] = useFonts({
     'CarbonIcons-Core': require('@vpicone/icons-react-native/assets/icons/CarbonIcons-Core.ttf'),
   });
@@ -8,4 +9,4 @@ const useCarbonFonts = (): [boolean, Error | null] => {
   return [loaded, error];
 };
 
-export default useCarbonFonts;
+export default useCarbonIcons;
