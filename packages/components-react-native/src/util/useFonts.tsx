@@ -25,7 +25,7 @@ const defaultMap = {
  * @see https://docs.expo.io/versions/latest/sdk/font/
  * @example const [loaded, error] = useFonts(...);
  */
-export function useFonts(additionalWeights: {
+export function useFonts(additionalWeights?: {
   [key: string]: string;
 }): [boolean, Error | null] {
   const [loaded, setLoaded] = useState(false);

@@ -35,7 +35,7 @@ const Text: React.FC<TextProps> = ({ children, kind = 'p1', ...rest }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: 'IBMPlexSans',
+    fontFamily: 'IBMPlexSans-Regular',
   },
   h1: {
     fontSize: 14,
