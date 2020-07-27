@@ -54,8 +54,7 @@
     "prettier-config-carbon": "^0.2.0",
     "react": "^16.13.1",
     "react-native": "^0.63.1",
-    "typescript": "^3.9.7",
-    "@react-native-community/bob": "^0.16.2"
+    "typescript": "^3.9.7"
   },
   "jest": {
     "modulePathIgnorePatterns": [
