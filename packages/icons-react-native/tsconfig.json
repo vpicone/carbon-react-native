@@ -1,10 +1,6 @@
 {
   "extends": "../../tsconfig",
-  "include": [
-    "src/index.tsx",
-    "src/types.d.ts",
-    "src/carbon-icomoon-data.json"
-  ],
+  "include": ["src/**/*", "src/**/*.json"],
   "compilerOptions": {
     "outDir": "./lib/typescript"
   }

@@ -1,8 +1,4 @@
 {
-  "references": [
-    { "path": "./packages/components-react-native" },
-    { "path": "./packages/icons-react-native" }
-  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -14,7 +10,7 @@
     "esModuleInterop": true,
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
+    "jsx": "react-native",
     "lib": ["esnext", "DOM"],
     "module": "esnext",
     "moduleResolution": "node",

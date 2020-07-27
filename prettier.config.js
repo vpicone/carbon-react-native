@@ -1,1 +1,3 @@
-module.exports = require('prettier-config-carbon');
+const config = require('prettier-config-carbon');
+
+module.exports = config;

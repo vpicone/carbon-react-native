@@ -41,6 +41,7 @@
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-typescript": "^3.0.0",
+    "expo-yarn-workspaces": "^1.2.1",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "lerna": "^3.22.1",
@@ -66,7 +67,13 @@
       "@react-native-community",
       "typescript",
       "typescript/prettier"
-    ]
+    ],
+    "rules": {
+      "multiline-comment-style": [
+        "error",
+        "starred-block"
+      ]
+    }
   },
   "eslintIgnore": [
     "android/",
