@@ -3,9 +3,6 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "publishConfig": {
-    "access": "public"
-  },
   "command": {
     "publish": {
       "allowBranch": "main",

@@ -14,6 +14,9 @@
     "lib",
     "!**/__tests__"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepare": "bob build",
     "clean": "del lib"
