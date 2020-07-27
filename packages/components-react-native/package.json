@@ -1,6 +1,6 @@
 {
   "name": "@vpicone/components-react-native",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "Apache-2.0",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -46,7 +46,7 @@
   "dependencies": {
     "@carbon/colors": "^10.11.0",
     "@carbon/themes": "^10.14.0",
-    "@vpicone/icons-react-native": "^0.1.4",
+    "@vpicone/icons-react-native": "^0.1.5",
     "prop-types": "^15.7.2"
   },
   "gitHead": "0b649a6560ed33f5f1d8cfd9ca8b12107b22b12b"
