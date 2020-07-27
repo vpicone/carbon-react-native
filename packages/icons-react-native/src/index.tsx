@@ -3,11 +3,11 @@ import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
 
 // generated from https://icomoon.io/app
 import iconMoonData from './carbon-icomoon-data.json';
-import type { IconProps } from 'react-native-vector-icons/Icon';
 import type { CarbonIconName } from './types';
 
-interface CarbonIconProps extends IconProps {
+interface CarbonIconProps {
   name: CarbonIconName;
+  size?: number;
 }
 
 // TODO add proper types so we folks can use the other Icon features
@@ -17,8 +17,8 @@ const Icon = createIconSetFromIcoMoon(
   'CarbonIcons-Core.ttf'
 );
 
-const CarbonIcon: React.FC<CarbonIconProps> = ({ size = 24, ...rest }) => (
-  <Icon size={size} {...rest} />
+const CarbonIcon: React.FC<CarbonIconProps> = ({ size = 24, name }) => (
+  <Icon size={size} name={name} />
 );
 
 export { default as useFonts } from './useFonts';

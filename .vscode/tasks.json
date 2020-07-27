@@ -9,7 +9,7 @@
       },
       "problemMatcher": [],
       "label": "npm: dev",
-      "detail": "yarn workspace demo start"
+      "detail": "yarn workspace example start"
     }
   ]
 }
