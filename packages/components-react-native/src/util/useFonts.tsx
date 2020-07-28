@@ -7,10 +7,10 @@ import { default as IBMPlexMono_Regular } from '@vpicone/components-react-native
 import { default as IBMPlexSans_Regular } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-Regular.ttf';
 import { default as IBMPlexSans_SemiBold } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-SemiBold.ttf';
 
-const defaultMap = {
+export const defaultMap = {
   IBMPlexSans_Light,
-  IBMPlexMono_Regular,
-  IBMPlexSans_Regular,
+  IBMPlexMono: IBMPlexMono_Regular,
+  IBMPlexSans: IBMPlexSans_Regular,
   IBMPlexSans_SemiBold,
   'CarbonIcons-Core': require('@vpicone/icons-react-native/assets/icons/CarbonIcons-Core.ttf'),
 };
