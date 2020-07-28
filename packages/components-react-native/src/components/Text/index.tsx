@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
   h1: {
     fontSize: 14,
     lineHeight: 18,
-    fontFamily: 'IBMPlexSans-SemiBold',
+    fontFamily: 'IBMPlexSans_SemiBold',
   },
   h2: {
     fontSize: 16,
     lineHeight: 22,
-    fontFamily: 'IBMPlexSans-SemiBold',
+    fontFamily: 'IBMPlexSans_SemiBold',
   },
   h3: {
     fontSize: 20,

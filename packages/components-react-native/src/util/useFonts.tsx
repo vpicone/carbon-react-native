@@ -22,7 +22,7 @@ export function useFonts(additionalWeights?: {
     IBMPlexMono: require('@vpicone/components-react-native/assets/plex/IBMPlexMono-Regular.ttf'),
     IBMPlexSans: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-Regular.ttf'),
     IBMPlexSans_Light: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-Light.ttf'),
-    'IBMPlexSans-SemiBold': require('@vpicone/components-react-native/assets/plex/IBMPlexSans-SemiBold.ttf'),
+    IBMPlexSans_SemiBold: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-SemiBold.ttf'),
     'CarbonIcons-Core': require('@vpicone/icons-react-native/assets/icons/CarbonIcons-Core.ttf'),
   };
 
