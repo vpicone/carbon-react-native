@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { loadAsync } from 'expo-font';
+import { loadAsync, FontSource } from 'expo-font';
 
 /**
  * Load a map of custom fonts to use in textual elements.
@@ -12,9 +12,9 @@ import { loadAsync } from 'expo-font';
  * @see https://docs.expo.io/versions/latest/sdk/font/
  * @example const [loaded, error] = useFonts(...);
  */
-export function useFonts(additionalWeights?: {
-  [key: string]: string;
-}): [boolean, Error | null] {
+export function useFonts(
+  additionalWeights?: Record<availableWeights, FontSource>
+): [boolean, Error | null] {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(null);
 
@@ -65,3 +65,33 @@ export { default as IBMPlexSans_Text } from '@vpicone/components-react-native/as
 export { default as IBMPlexSans_TextItalic } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-TextItalic.ttf';
 export { default as IBMPlexSans_Thin } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-Thin.ttf';
 export { default as IBMPlexSans_ThinItalic } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-ThinItalic.ttf';
+
+type availableWeights =
+  | 'IBMPlexMono_Bold'
+  | 'IBMPlexMono_BoldItalic'
+  | 'IBMPlexMono_ExtraLight'
+  | 'IBMPlexMono_ExtraLightItalic'
+  | 'IBMPlexMono_Italic'
+  | 'IBMPlexMono_Light'
+  | 'IBMPlexMono_LightItalic'
+  | 'IBMPlexMono_Medium'
+  | 'IBMPlexMono_MediumItalic'
+  | 'IBMPlexMono_SemiBold'
+  | 'IBMPlexMono_SemiBoldItalic'
+  | 'IBMPlexMono_Text'
+  | 'IBMPlexMono_TextItalic'
+  | 'IBMPlexMono_Thin'
+  | 'IBMPlexMono_ThinItalic'
+  | 'IBMPlexSans_Bold'
+  | 'IBMPlexSans_BoldItalic'
+  | 'IBMPlexSans_ExtraLight'
+  | 'IBMPlexSans_ExtraLightItalic'
+  | 'IBMPlexSans_Italic'
+  | 'IBMPlexSans_LightItalic'
+  | 'IBMPlexSans_Medium'
+  | 'IBMPlexSans_MediumItalic'
+  | 'IBMPlexSans_SemiBoldItalic'
+  | 'IBMPlexSans_Text'
+  | 'IBMPlexSans_TextItalic'
+  | 'IBMPlexSans_Thin'
+  | 'IBMPlexSans_ThinItalic';
