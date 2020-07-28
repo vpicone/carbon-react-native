@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/vpicone/carbon-react-native/compare/@vpicone/components-react-native@0.1.7...@vpicone/components-react-native@0.1.8) (2020-07-28)
+
+
+### Bug Fixes
+
+* default map ([2c231f6](https://github.com/vpicone/carbon-react-native/commit/2c231f6eee152775124bdd34916e7ff584abbf9e))
+
+
+
+
+
 ## [0.1.7](https://github.com/vpicone/carbon-react-native/compare/@vpicone/components-react-native@0.1.6...@vpicone/components-react-native@0.1.7) (2020-07-28)
 
 
