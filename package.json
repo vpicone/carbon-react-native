@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "prepare": "lerna run prepare",
-    "dev": "yarn workspace example start",
-    "ios": "yarn workspace example ios",
-    "android": "yarn workspace example android",
+    "dev": "yarn workspace @vpicone/example start",
+    "ios": "yarn workspace @vpicone/example ios",
+    "android": "yarn workspace @vpicone/example android",
     "test": "jest",
     "clean": "lerna run clean",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",

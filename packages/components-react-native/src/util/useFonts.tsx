@@ -2,19 +2,6 @@ import { useEffect, useState } from 'react';
 
 import { loadAsync } from 'expo-font';
 
-import { default as IBMPlexSans_Light } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-Light.ttf';
-import { default as IBMPlexMono } from '@vpicone/components-react-native/assets/plex/IBMPlexMono-Regular.ttf';
-import { default as IBMPlexSans } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-Regular.ttf';
-import { default as IBMPlexSans_SemiBold } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-SemiBold.ttf';
-
-export const defaultMap = {
-  IBMPlexMono,
-  IBMPlexSans,
-  'IBMPlexSans-Light': IBMPlexSans_Light,
-  'IBMPlexSans-SemiBold': IBMPlexSans_SemiBold,
-  'CarbonIcons-Core': require('@vpicone/icons-react-native/assets/icons/CarbonIcons-Core.ttf'),
-};
-
 /**
  * Load a map of custom fonts to use in textual elements.
  * The map keys are used as font names, and can be used with `fontFamily: <name>;`.
@@ -30,6 +17,14 @@ export function useFonts(additionalWeights?: {
 }): [boolean, Error | null] {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(null);
+
+  const defaultMap = {
+    IBMPlexMono: require('@vpicone/components-react-native/assets/plex/IBMPlexMono-Regular.ttf'),
+    IBMPlexSans: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-Regular.ttf'),
+    IBMPlexSans_Light: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-Light.ttf'),
+    'IBMPlexSans-SemiBold': require('@vpicone/components-react-native/assets/plex/IBMPlexSans-SemiBold.ttf'),
+    'CarbonIcons-Core': require('@vpicone/icons-react-native/assets/icons/CarbonIcons-Core.ttf'),
+  };
 
   const map = { ...defaultMap, ...additionalWeights };
 
