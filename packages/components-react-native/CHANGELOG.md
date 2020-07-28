@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/vpicone/carbon-react-native/compare/@vpicone/components-react-native@0.1.6...@vpicone/components-react-native@0.1.7) (2020-07-28)
+
+
+### Bug Fixes
+
+* useFonts default map ([fff3e91](https://github.com/vpicone/carbon-react-native/commit/fff3e918ffaa6c78cdef5979ba1b147fda320bf7))
+
+
+
+
+
 ## [0.1.6](https://github.com/vpicone/carbon-react-native/compare/@vpicone/components-react-native@0.1.5...@vpicone/components-react-native@0.1.6) (2020-07-28)
 
 **Note:** Version bump only for package @vpicone/components-react-native
