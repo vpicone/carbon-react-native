@@ -3,15 +3,15 @@ import { useEffect, useState } from 'react';
 import { loadAsync } from 'expo-font';
 
 import { default as IBMPlexSans_Light } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-Light.ttf';
-import { default as IBMPlexMono_Regular } from '@vpicone/components-react-native/assets/plex/IBMPlexMono-Regular.ttf';
-import { default as IBMPlexSans_Regular } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-Regular.ttf';
+import { default as IBMPlexMono } from '@vpicone/components-react-native/assets/plex/IBMPlexMono-Regular.ttf';
+import { default as IBMPlexSans } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-Regular.ttf';
 import { default as IBMPlexSans_SemiBold } from '@vpicone/components-react-native/assets/plex/IBMPlexSans-SemiBold.ttf';
 
 export const defaultMap = {
-  IBMPlexSans_Light,
-  IBMPlexMono: IBMPlexMono_Regular,
-  IBMPlexSans: IBMPlexSans_Regular,
-  IBMPlexSans_SemiBold,
+  IBMPlexMono,
+  IBMPlexSans,
+  'IBMPlexSans-Light': IBMPlexSans_Light,
+  'IBMPlexSans-SemiBold': IBMPlexSans_SemiBold,
   'CarbonIcons-Core': require('@vpicone/icons-react-native/assets/icons/CarbonIcons-Core.ttf'),
 };
 

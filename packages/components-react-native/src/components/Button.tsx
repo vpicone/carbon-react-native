@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     paddingRight: 64,
   },
   title: {
-    fontFamily: 'IBMPlexSans_Regular',
+    fontFamily: 'IBMPlexSans',
     color: theme.text04,
     fontSize: Platform.select({
       android: 16,
