@@ -17,7 +17,7 @@
   },
   "resolutions": {
     "react": "^16.13.1",
-    "react-native": "^0.62.2"
+    "react-native": "^0.63.2"
   },
   "husky": {
     "hooks": {
@@ -30,7 +30,7 @@
       "@commitlint/config-conventional"
     ]
   },
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/runtime": "^7.10.5",

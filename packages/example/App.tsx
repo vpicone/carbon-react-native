@@ -8,11 +8,7 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Text,
-  useFonts,
-  IBMPlexSans_BoldItalic,
-} from '@vpicone/components-react-native';
+import { Text, useFonts } from '@vpicone/components-react-native';
 
 import ButtonDemo from './components/demos/Button';
 import TextDemo from './components/demos/Text';
@@ -20,7 +16,7 @@ import TextDemo from './components/demos/Text';
 import Icon from '@vpicone/icons-react-native';
 
 const App: React.FC = () => {
-  const [fontsLoaded] = useFonts({ IBMPlexSans_BoldItalic });
+  const [fontsLoaded] = useFonts();
 
   if (!fontsLoaded) {
     return <AppLoading />;

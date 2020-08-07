@@ -7,19 +7,20 @@ import {
   StyleSheet,
   StyleProp,
   ViewStyle,
-  TouchableWithoutFeedback,
-  TouchableWithoutFeedbackProps,
+  Pressable,
+  PressableProps,
   TextStyle,
   TextProps,
   Platform,
   ViewProps,
+  PixelRatio,
 } from 'react-native';
 
 export interface ButtonProps {
   title: string;
   titleProps?: TextProps;
   titleStyle?: StyleProp<TextStyle>;
-  buttonProps?: TouchableWithoutFeedbackProps;
+  buttonProps?: PressableProps;
   buttonStyle?: StyleProp<ViewStyle>;
   pressedStyle?: StyleProp<ViewStyle>;
   containerProps?: ViewProps;
@@ -69,36 +70,30 @@ const Button: React.FC<ButtonProps> = ({
   const disabledTitleStyle = [styles.disabledTitle, disabledTitleStyleProp];
 
   return (
-    <View
-      style={[viewStyle, styles[kind], disabled && disabledButtonStyle]}
-      {...containerProps}>
-      <TouchableWithoutFeedback {...buttonProps}>
-        {title && (
-          <Text
-            style={[
-              styles.title,
-              kind === 'tertiary' && styles.tertiaryTitle,
-              titleStyleProp,
-              disabled && disabledTitleStyle,
-            ]}
-            {...titleProps}>
-            {title}
-          </Text>
-        )}
-      </TouchableWithoutFeedback>
-    </View>
+    <Pressable
+      style={[styles.button, styles[kind], disabled && disabledButtonStyle]}
+      {...buttonProps}>
+      {title && (
+        <Text
+          style={[
+            styles.title,
+            kind === 'tertiary' && styles.tertiaryTitle,
+            titleStyleProp,
+            disabled && disabledTitleStyle,
+          ]}
+          {...titleProps}>
+          {PixelRatio.getFontScale()}
+        </Text>
+      )}
+    </Pressable>
   );
 };
 
 // style order should go from container in
 const styles = StyleSheet.create({
-  container: {
-    overflow: 'hidden',
-  },
   button: {
     flexDirection: 'row',
-    padding: 16,
-    paddingRight: 64,
+    padding: 16 * Math.min(PixelRatio.getFontScale(), 1),
   },
   title: {
     fontFamily: 'IBMPlexSans',
