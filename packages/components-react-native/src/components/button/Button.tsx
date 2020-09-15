@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { white as theme } from '@carbon/themes';
+
 import {
-  View,
   Text,
-  StyleSheet,
   StyleProp,
   ViewStyle,
   Pressable,
   PressableProps,
   TextStyle,
   TextProps,
-  Platform,
   ViewProps,
   PixelRatio,
 } from 'react-native';
+
+import { useTheme, Theme } from '../../theme/ThemeProvider';
 
 export interface ButtonProps {
   title: string;
@@ -65,26 +64,21 @@ export const Button: React.FC<ButtonProps> = ({
   buttonProps,
   kind = Kind.Primary,
   disabled = false,
-  disabledButtonStyle: disabledButtonStyleProp,
-  disabledTitleStyle: disabledTitleStyleProp,
 }) => {
+  const theme = useTheme();
   return (
     <Pressable
-      style={({ pressed }) =>
-        StyleSheet.flatten([
-          styles.button,
-          styles.base({ kind, pressed, disabled }),
-          disabled && disabledButtonStyleProp,
-        ])
-      }
+      style={({ pressed }) => [
+        styles.button,
+        styles.base({ kind, pressed, disabled, theme }),
+      ]}
       {...buttonProps}>
       {({ pressed }) => (
         <Text
-          style={StyleSheet.flatten([
-            styles.title({ kind, pressed, disabled }),
+          style={[
+            styles.title({ kind, pressed, disabled, theme }),
             titleStyleProp,
-            disabled && disabledTitleStyleProp,
-          ])}
+          ]}
           {...titleProps}>
           {title}
         </Text>
@@ -95,22 +89,27 @@ export const Button: React.FC<ButtonProps> = ({
 
 const styles = {
   button: {
-    flexDirection: 'row',
     padding: 16 * Math.min(PixelRatio.getFontScale(), 1),
   },
   title: ({
     kind,
     pressed,
     disabled,
+    theme,
   }: {
     kind: Kind;
     pressed: boolean;
     disabled: boolean;
+    theme: Theme;
   }) => {
     let color = theme.text04;
 
-    if (kind === Kind.Tertiary && !pressed) {
-      color = theme.interactive03;
+    if (kind === Kind.Tertiary) {
+      if (pressed) {
+        color = theme.inverse01;
+      } else {
+        color = theme.interactive03;
+      }
     }
 
     if (disabled) {
@@ -127,10 +126,12 @@ const styles = {
     kind,
     pressed,
     disabled,
+    theme,
   }: {
     kind: Kind;
     pressed: boolean;
     disabled: boolean;
+    theme: Theme;
   }) => {
     if (disabled) {
       return {

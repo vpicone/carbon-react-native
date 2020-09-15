@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text as RNText,
-  TextProps as RNTextProps,
-} from 'react-native';
+import { Text as RNText, TextProps as RNTextProps } from 'react-native';
+import { useTheme, Theme } from '../../theme/ThemeProvider';
 
 type ChildElement = React.ReactText | TextElement;
 
@@ -26,17 +23,19 @@ export interface TextProps extends RNTextProps {
 }
 
 const Text: React.FC<TextProps> = ({ children, kind = 'p1', ...rest }) => {
+  const theme = useTheme();
   return (
-    <RNText style={[styles.text, styles[kind]]} {...rest}>
+    <RNText style={[styles.text(theme), styles[kind]]} {...rest}>
       {children}
     </RNText>
   );
 };
 
-const styles = StyleSheet.create({
-  text: {
+const styles = {
+  text: (theme: Theme) => ({
     fontFamily: 'IBMPlexSans',
-  },
+    color: theme.text01,
+  }),
   h1: {
     fontSize: 14,
     lineHeight: 18,
@@ -84,6 +83,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 20,
   },
-});
+};
 
 export default Text;
