@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text as RNText, TextProps as RNTextProps } from 'react-native';
-import { useTheme, Theme } from '../../theme/ThemeProvider';
+import { useTheme, Theme } from '../../theme/ThemeManager';
 
 type ChildElement = React.ReactText | TextElement;
 

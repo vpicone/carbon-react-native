@@ -13,7 +13,7 @@ import {
   PixelRatio,
 } from 'react-native';
 
-import { useTheme, Theme } from '../../theme/ThemeProvider';
+import { useTheme, Theme } from '../../theme/ThemeManager';
 
 export interface ButtonProps {
   title: string;

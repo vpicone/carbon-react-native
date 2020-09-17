@@ -23,7 +23,7 @@ export function useFonts(
     IBMPlexSans: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-Regular.ttf'),
     IBMPlexSans_Light: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-Light.ttf'),
     IBMPlexSans_SemiBold: require('@vpicone/components-react-native/assets/plex/IBMPlexSans-SemiBold.ttf'),
-    'CarbonIcons-Core': require('@vpicone/icons-react-native/assets/icons/CarbonIcons-Core.ttf'),
+    'CarbonIcons-Core': require('@vpicone/components-react-native/assets/icons/CarbonIcons-Core.ttf'),
   };
 
   const map = { ...defaultMap, ...additionalWeights };

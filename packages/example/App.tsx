@@ -1,12 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AppLoading } from 'expo';
-import {
-  SafeAreaView,
-  StyleSheet,
-  StatusBar,
-  ScrollView,
-  View,
-} from 'react-native';
+import { SafeAreaView, StatusBar, ScrollView, View } from 'react-native';
 
 import {
   Text,
@@ -19,16 +13,30 @@ import {
 import ButtonDemo from './components/demos/Button';
 import TextDemo from './components/demos/Text';
 
-import Icon from '@vpicone/icons-react-native';
+import { Icon } from '../components-react-native';
+
+const Demo = () => {
+  const theme = useTheme();
+  return (
+    <SafeAreaView
+      style={[styles.safeArea(theme), { backgroundColor: theme.uiBackground }]}>
+      <ScrollView style={styles.scrollView}>
+        <Text kind="h6">Button</Text>
+        <ButtonDemo />
+        <Text kind="h6">Icons</Text>
+        <View style={styles.icons}>
+          <Icon size={48} name="windy--dust" />
+          <Icon size={48} name="face--mask" />
+        </View>
+        <Text kind="h6">Typography</Text>
+        <TextDemo />
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts();
-  const theme = useTheme();
-  const [backgroundColor, setBackgroundColor] = useState(theme.uiBackground);
-
-  useEffect(() => {
-    setBackgroundColor(theme.uiBackground);
-  }, [theme]);
 
   if (!fontsLoaded) {
     return <AppLoading />;
@@ -36,19 +44,7 @@ const App: React.FC = () => {
     return (
       <ThemeProvider>
         <StatusBar barStyle="light-content" />
-        <SafeAreaView style={styles.safeArea(theme)}>
-          <ScrollView style={styles.scrollView}>
-            <Text kind="h6">Button</Text>
-            <ButtonDemo />
-            <Text kind="h6">Icons</Text>
-            <View style={styles.icons}>
-              <Icon size={48} name="windy--dust" />
-              <Icon size={48} name="face--mask" />
-            </View>
-            <Text kind="h6">Typography</Text>
-            <TextDemo />
-          </ScrollView>
-        </SafeAreaView>
+        <Demo />
       </ThemeProvider>
     );
   }

@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig",
-  "references": [{ "path": "../icons-react-native" }],
+  "include": ["src/**/*.ts*", "src/**/*.json", "types/**/*.d.ts"],
   "compilerOptions": {
     "outDir": "./lib/typescript"
   }

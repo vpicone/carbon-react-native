@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { white, g100 } from '@carbon/themes';
-import { Appearance, ColorValue } from 'react-native';
+import { Appearance } from 'react-native';
 import type { ColorToken } from './ColorToken';
 
 /*

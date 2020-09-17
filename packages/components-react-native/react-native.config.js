@@ -1,5 +1,5 @@
 module.exports = {
   dependency: {
-    assets: ['assets/plex'],
+    assets: ['assets/plex', 'assets/icons'],
   },
 };
