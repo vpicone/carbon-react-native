@@ -8,12 +8,11 @@ import {
   ThemeProvider,
   useTheme,
   Theme,
+  Icon,
 } from '@vpicone/components-react-native';
 
 import ButtonDemo from './components/demos/Button';
 import TextDemo from './components/demos/Text';
-
-import { Icon } from '../components-react-native';
 
 const Demo = () => {
   const theme = useTheme();
