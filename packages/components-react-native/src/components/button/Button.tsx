@@ -19,7 +19,7 @@ export interface ButtonProps {
   title: string;
   titleProps?: TextProps;
   titleStyle?: StyleProp<TextStyle>;
-  buttonProps?: PressableProps;
+  pressableProps?: PressableProps;
   buttonStyle?: StyleProp<ViewStyle>;
   pressedStyle?: StyleProp<ViewStyle>;
   containerProps?: ViewProps;
@@ -61,22 +61,27 @@ export const Button: React.FC<ButtonProps> = ({
   title,
   titleProps,
   titleStyle: titleStyleProp,
-  buttonProps,
+  pressableProps,
   kind = Kind.Primary,
   disabled = false,
 }) => {
   const theme = useTheme();
+
   return (
     <Pressable
       style={({ pressed }) => [
         styles.button,
-        styles.base({ kind, pressed, disabled, theme }),
+        styles.base({ kind, theme }),
+        pressed && styles.basePressed({ kind, theme }),
+        disabled && styles.baseDisabled({ theme }),
       ]}
-      {...buttonProps}>
+      {...pressableProps}>
       {({ pressed }) => (
         <Text
           style={[
-            styles.title({ kind, pressed, disabled, theme }),
+            styles.title({ kind, theme }),
+            pressed && styles.titlePressed({ theme, kind }),
+            disabled && styles.titleDisabled({ theme }),
             titleStyleProp,
           ]}
           {...titleProps}>
@@ -91,78 +96,67 @@ const styles = {
   button: {
     padding: 16 * Math.min(PixelRatio.getFontScale(), 1),
   },
-  title: ({
-    kind,
-    pressed,
-    disabled,
-    theme,
-  }: {
-    kind: Kind;
-    pressed: boolean;
-    disabled: boolean;
-    theme: Theme;
-  }) => {
-    let color = theme.text04;
-
-    if (kind === Kind.Tertiary) {
-      if (pressed) {
-        color = theme.inverse01;
-      } else {
-        color = theme.interactive03;
-      }
-    }
-
-    if (disabled) {
-      color = theme.disabled03;
-    }
-
-    return {
-      color: color,
-      fontFamily: 'IBMPlexSans',
-      fontSize: 16,
-    };
-  },
-  base: ({
-    kind,
-    pressed,
-    disabled,
-    theme,
-  }: {
-    kind: Kind;
-    pressed: boolean;
-    disabled: boolean;
-    theme: Theme;
-  }) => {
-    if (disabled) {
-      return {
-        backgroundColor: theme.disabled02,
-      };
-    }
-
+  base: ({ kind, theme }: { kind: Kind; theme: Theme }) => {
     if (kind === Kind.Secondary) {
       return {
-        backgroundColor: pressed ? theme.activeSecondary : theme.interactive02,
+        backgroundColor: theme.interactive02,
       };
     }
-
     if (kind === Kind.Tertiary) {
       return {
         borderWidth: 1,
         borderColor: theme.interactive03,
-        backgroundColor: pressed ? theme.interactive03 : 'transparent',
+        backgroundColor: 'transparent',
+      };
+    }
+    if (kind === Kind.Danger) {
+      return {
+        backgroundColor: theme.danger,
+      };
+    }
+    return {
+      backgroundColor: theme.interactive01,
+    };
+  },
+  basePressed: ({ kind, theme }: { kind: Kind; theme: Theme }) => {
+    if (kind === Kind.Secondary) {
+      return {
+        backgroundColor: theme.activeSecondary,
+      };
+    }
+
+    if (kind === Kind.Tertiary) {
+      return {
+        backgroundColor: theme.interactive03,
       };
     }
 
     if (kind === Kind.Danger) {
       return {
-        backgroundColor: pressed ? theme.activeDanger : theme.danger,
+        backgroundColor: theme.activeDanger,
       };
     }
 
     return {
-      backgroundColor: pressed ? theme.activePrimary : theme.interactive01,
+      backgroundColor: theme.activePrimary,
     };
   },
+  baseDisabled: ({ theme }: { theme: Theme }) => {
+    return {
+      backgroundColor: theme.disabled02,
+    };
+  },
+  title: ({ theme, kind }: { theme: Theme; kind: Kind }) => ({
+    color: kind === Kind.Tertiary ? theme.interactive03 : theme.text04,
+    fontFamily: 'IBMPlexSans',
+    fontSize: 16,
+  }),
+  titlePressed: ({ theme, kind }: { theme: Theme; kind: Kind }) => ({
+    color: kind === Kind.Tertiary ? theme.inverse01 : theme.text04,
+  }),
+  titleDisabled: ({ theme }: { theme: Theme }) => ({
+    color: theme.disabled03,
+  }),
 };
 
 Button.propTypes = {
