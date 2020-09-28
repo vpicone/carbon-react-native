@@ -13,6 +13,7 @@ import {
 
 import ButtonDemo from './components/demos/Button';
 import TextDemo from './components/demos/Text';
+import TextInputDemo from './components/demos/TextInput';
 
 const Demo = () => {
   const theme = useTheme();
@@ -20,6 +21,8 @@ const Demo = () => {
     <SafeAreaView
       style={[styles.safeArea(theme), { backgroundColor: theme.uiBackground }]}>
       <ScrollView style={styles.scrollView}>
+        <Text kind="h6">TextInput</Text>
+        <TextInputDemo />
         <Text kind="h6">Button</Text>
         <ButtonDemo />
         <Text kind="h6">Icons</Text>

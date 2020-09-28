@@ -1,5 +1,9 @@
 import React from 'react';
-import { Text as RNText, TextProps as RNTextProps } from 'react-native';
+import {
+  Text as RNText,
+  TextProps as RNTextProps,
+  TextStyle,
+} from 'react-native';
 import { useTheme, Theme } from '../../theme/ThemeManager';
 
 type ChildElement = React.ReactText | TextElement;
@@ -20,12 +24,18 @@ export interface TextProps extends RNTextProps {
     | 'p1'
     | 'p2';
   children?: ChildElement | ChildElement[];
+  style?: TextStyle;
 }
 
-const Text: React.FC<TextProps> = ({ children, kind = 'p1', ...rest }) => {
+const Text: React.FC<TextProps> = ({
+  children,
+  kind = 'p1',
+  style: styleProp,
+  ...rest
+}) => {
   const theme = useTheme();
   return (
-    <RNText style={[styles.text(theme), styles[kind]]} {...rest}>
+    <RNText style={[styles.text(theme), styles[kind], styleProp]} {...rest}>
       {children}
     </RNText>
   );
@@ -72,11 +82,11 @@ const styles = {
     fontFamily: 'IBMPlexMono',
   },
   label: {
-    fontSize: 12,
+    fontSize: 14,
     lineHeight: 16,
   },
   p1: {
-    fontSize: 14,
+    fontSize: 16,
     lineHeight: 18,
   },
   p2: {
