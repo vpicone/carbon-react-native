@@ -39,7 +39,6 @@ const TextInput: React.FC<
 
   const onFocus = () => {
     setIsFocused(true);
-    console.log(styles.inputContainer(theme, status));
   };
 
   const onBlur = () => {
